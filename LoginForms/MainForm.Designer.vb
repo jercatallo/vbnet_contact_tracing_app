@@ -24,15 +24,6 @@ Partial Class MainForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.btnAdd = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnExit = New System.Windows.Forms.Button()
-        Me.btnShowUsersAccount = New System.Windows.Forms.Button()
-        Me.btnEditGrades = New System.Windows.Forms.Button()
-        Me.btnEditInfo = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,103 +32,33 @@ Partial Class MainForm
         Me.RefreshToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.currentD = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btnRecords = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnTrace = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
-        Me.btnAddRecord = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnDashboard = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.DirectoryEntry1 = New System.DirectoryServices.DirectoryEntry()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.casesCount = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.registeredCount = New System.Windows.Forms.Label()
+        Me.activeLocationCount = New System.Windows.Forms.Label()
+        Me.todayAddedCount = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(482, 213)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(634, 241)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'btnAdd
-        '
-        Me.btnAdd.Location = New System.Drawing.Point(482, 511)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(94, 45)
-        Me.btnAdd.TabIndex = 1
-        Me.btnAdd.Text = "Add"
-        Me.btnAdd.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(1016, 460)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 5
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(931, 463)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(79, 13)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "No. of Records"
-        '
-        'btnDelete
-        '
-        Me.btnDelete.Location = New System.Drawing.Point(767, 511)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(91, 45)
-        Me.btnDelete.TabIndex = 7
-        Me.btnDelete.Text = "Delete"
-        Me.btnDelete.UseVisualStyleBackColor = True
-        '
-        'btnExit
-        '
-        Me.btnExit.Location = New System.Drawing.Point(1047, 511)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(69, 45)
-        Me.btnExit.TabIndex = 8
-        Me.btnExit.Text = "Exit"
-        Me.btnExit.UseVisualStyleBackColor = True
-        '
-        'btnShowUsersAccount
-        '
-        Me.btnShowUsersAccount.Location = New System.Drawing.Point(864, 511)
-        Me.btnShowUsersAccount.Name = "btnShowUsersAccount"
-        Me.btnShowUsersAccount.Size = New System.Drawing.Size(87, 45)
-        Me.btnShowUsersAccount.TabIndex = 9
-        Me.btnShowUsersAccount.Text = "Show Users  Account"
-        Me.btnShowUsersAccount.UseVisualStyleBackColor = True
-        '
-        'btnEditGrades
-        '
-        Me.btnEditGrades.Location = New System.Drawing.Point(674, 511)
-        Me.btnEditGrades.Name = "btnEditGrades"
-        Me.btnEditGrades.Size = New System.Drawing.Size(87, 45)
-        Me.btnEditGrades.TabIndex = 10
-        Me.btnEditGrades.Text = "Edit Grades"
-        Me.btnEditGrades.UseVisualStyleBackColor = True
-        '
-        'btnEditInfo
-        '
-        Me.btnEditInfo.Location = New System.Drawing.Point(581, 511)
-        Me.btnEditInfo.Name = "btnEditInfo"
-        Me.btnEditInfo.Size = New System.Drawing.Size(87, 45)
-        Me.btnEditInfo.TabIndex = 12
-        Me.btnEditInfo.Text = "Edit Info"
-        Me.btnEditInfo.UseVisualStyleBackColor = True
         '
         'MenuStrip1
         '
@@ -198,71 +119,34 @@ Partial Class MainForm
         Me.EditToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
-        'Timer1
-        '
-        Me.Timer1.Enabled = True
-        '
-        'currentD
-        '
-        Me.currentD.AutoSize = True
-        Me.currentD.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.currentD.Location = New System.Drawing.Point(824, 156)
-        Me.currentD.Name = "currentD"
-        Me.currentD.Size = New System.Drawing.Size(199, 39)
-        Me.currentD.TabIndex = 14
-        Me.currentD.Text = "currentDate"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Bahnschrift Light Condensed", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Label7.Location = New System.Drawing.Point(7, 92)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(77, 25)
-        Me.Label7.TabIndex = 17
-        Me.Label7.Text = "Welcome,"
-        '
         'Label6
         '
         Me.Label6.BackColor = System.Drawing.Color.LightCyan
-        Me.Label6.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label6.Location = New System.Drawing.Point(261, 24)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(921, 56)
         Me.Label6.TabIndex = 16
-        Me.Label6.Text = "Admin Dashboard"
+        Me.Label6.Text = "ADMIN DASHBOARD"
         '
         'btnRecords
         '
         Me.btnRecords.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnRecords.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnRecords.FlatAppearance.BorderColor = System.Drawing.SystemColors.InfoText
         Me.btnRecords.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight
         Me.btnRecords.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight
         Me.btnRecords.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnRecords.Font = New System.Drawing.Font("Bahnschrift SemiLight Condensed", 15.75!)
+        Me.btnRecords.Font = New System.Drawing.Font("Bahnschrift SemiLight Condensed", 12.75!)
         Me.btnRecords.ForeColor = System.Drawing.SystemColors.InactiveBorder
         Me.btnRecords.Location = New System.Drawing.Point(0, 189)
         Me.btnRecords.Name = "btnRecords"
         Me.btnRecords.Size = New System.Drawing.Size(260, 42)
         Me.btnRecords.TabIndex = 19
-        Me.btnRecords.Text = "Records"
+        Me.btnRecords.Text = "          Records"
         Me.btnRecords.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnRecords.UseVisualStyleBackColor = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Bahnschrift Condensed", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Label2.Location = New System.Drawing.Point(77, 87)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(95, 33)
-        Me.Label2.TabIndex = 20
-        Me.Label2.Text = "John Doe"
         '
         'Label8
         '
@@ -291,13 +175,14 @@ Partial Class MainForm
         'btnTrace
         '
         Me.btnTrace.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnTrace.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnTrace.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight
         Me.btnTrace.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight
         Me.btnTrace.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight
         Me.btnTrace.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTrace.Font = New System.Drawing.Font("Bahnschrift SemiLight Condensed", 15.75!)
+        Me.btnTrace.Font = New System.Drawing.Font("Bahnschrift SemiLight Condensed", 12.75!)
         Me.btnTrace.ForeColor = System.Drawing.SystemColors.InactiveBorder
-        Me.btnTrace.Location = New System.Drawing.Point(0, 278)
+        Me.btnTrace.Location = New System.Drawing.Point(0, 234)
         Me.btnTrace.Name = "btnTrace"
         Me.btnTrace.Size = New System.Drawing.Size(260, 42)
         Me.btnTrace.TabIndex = 27
@@ -308,36 +193,20 @@ Partial Class MainForm
         'btnLogout
         '
         Me.btnLogout.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnLogout.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight
         Me.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight
         Me.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogout.Font = New System.Drawing.Font("Bahnschrift SemiLight Condensed", 15.75!)
+        Me.btnLogout.Font = New System.Drawing.Font("Bahnschrift SemiLight Condensed", 12.75!)
         Me.btnLogout.ForeColor = System.Drawing.SystemColors.InactiveBorder
-        Me.btnLogout.Location = New System.Drawing.Point(0, 324)
+        Me.btnLogout.Location = New System.Drawing.Point(0, 280)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(260, 42)
         Me.btnLogout.TabIndex = 28
         Me.btnLogout.Text = "Logout"
         Me.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnLogout.UseVisualStyleBackColor = False
-        '
-        'btnAddRecord
-        '
-        Me.btnAddRecord.BackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.btnAddRecord.FlatAppearance.BorderColor = System.Drawing.SystemColors.InfoText
-        Me.btnAddRecord.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.btnAddRecord.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.btnAddRecord.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnAddRecord.Font = New System.Drawing.Font("Bahnschrift SemiLight Condensed", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddRecord.ForeColor = System.Drawing.SystemColors.InactiveBorder
-        Me.btnAddRecord.Location = New System.Drawing.Point(0, 233)
-        Me.btnAddRecord.Name = "btnAddRecord"
-        Me.btnAddRecord.Size = New System.Drawing.Size(260, 42)
-        Me.btnAddRecord.TabIndex = 29
-        Me.btnAddRecord.Text = "Add Record"
-        Me.btnAddRecord.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAddRecord.UseVisualStyleBackColor = False
         '
         'PictureBox2
         '
@@ -364,11 +233,13 @@ Partial Class MainForm
         'btnDashboard
         '
         Me.btnDashboard.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDashboard.FlatAppearance.BorderColor = System.Drawing.SystemColors.InfoText
+        Me.btnDashboard.FlatAppearance.BorderSize = 0
         Me.btnDashboard.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight
         Me.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight
         Me.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnDashboard.Font = New System.Drawing.Font("Bahnschrift SemiLight Condensed", 15.75!)
+        Me.btnDashboard.Font = New System.Drawing.Font("Bahnschrift SemiLight Condensed", 12.75!)
         Me.btnDashboard.ForeColor = System.Drawing.SystemColors.InactiveBorder
         Me.btnDashboard.Location = New System.Drawing.Point(0, 145)
         Me.btnDashboard.Name = "btnDashboard"
@@ -378,6 +249,133 @@ Partial Class MainForm
         Me.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnDashboard.UseVisualStyleBackColor = False
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Bahnschrift Condensed", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.Label2.Location = New System.Drawing.Point(6, 106)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(95, 33)
+        Me.Label2.TabIndex = 49
+        Me.Label2.Text = "John Doe"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Bahnschrift Light Condensed", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.Label7.Location = New System.Drawing.Point(8, 84)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(77, 25)
+        Me.Label7.TabIndex = 48
+        Me.Label7.Text = "Welcome,"
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.Red
+        Me.Label1.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label1.Location = New System.Drawing.Point(296, 376)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(392, 228)
+        Me.Label1.TabIndex = 56
+        Me.Label1.Text = "Active Cases"
+        '
+        'casesCount
+        '
+        Me.casesCount.BackColor = System.Drawing.Color.Red
+        Me.casesCount.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.casesCount.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.casesCount.Location = New System.Drawing.Point(296, 424)
+        Me.casesCount.Name = "casesCount"
+        Me.casesCount.Size = New System.Drawing.Size(231, 58)
+        Me.casesCount.TabIndex = 57
+        Me.casesCount.Text = "81"
+        '
+        'Label11
+        '
+        Me.Label11.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label11.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label11.Location = New System.Drawing.Point(744, 106)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(392, 228)
+        Me.Label11.TabIndex = 60
+        Me.Label11.Text = "Most Active Cases Area"
+        '
+        'Label12
+        '
+        Me.Label12.BackColor = System.Drawing.Color.Lime
+        Me.Label12.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label12.Location = New System.Drawing.Point(296, 106)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(392, 228)
+        Me.Label12.TabIndex = 59
+        Me.Label12.Text = "Registered"
+        '
+        'registeredCount
+        '
+        Me.registeredCount.BackColor = System.Drawing.Color.Lime
+        Me.registeredCount.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.registeredCount.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.registeredCount.Location = New System.Drawing.Point(296, 155)
+        Me.registeredCount.Name = "registeredCount"
+        Me.registeredCount.Size = New System.Drawing.Size(256, 58)
+        Me.registeredCount.TabIndex = 62
+        Me.registeredCount.Text = "55"
+        '
+        'activeLocationCount
+        '
+        Me.activeLocationCount.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.activeLocationCount.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.activeLocationCount.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.activeLocationCount.Location = New System.Drawing.Point(744, 154)
+        Me.activeLocationCount.Name = "activeLocationCount"
+        Me.activeLocationCount.Size = New System.Drawing.Size(268, 59)
+        Me.activeLocationCount.TabIndex = 63
+        Me.activeLocationCount.Text = "81"
+        '
+        'todayAddedCount
+        '
+        Me.todayAddedCount.BackColor = System.Drawing.Color.Blue
+        Me.todayAddedCount.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.todayAddedCount.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.todayAddedCount.Location = New System.Drawing.Point(744, 424)
+        Me.todayAddedCount.Name = "todayAddedCount"
+        Me.todayAddedCount.Size = New System.Drawing.Size(246, 61)
+        Me.todayAddedCount.TabIndex = 65
+        Me.todayAddedCount.Text = "2"
+        '
+        'Label9
+        '
+        Me.Label9.BackColor = System.Drawing.Color.Blue
+        Me.Label9.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label9.Location = New System.Drawing.Point(744, 376)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(392, 228)
+        Me.Label9.TabIndex = 64
+        Me.Label9.Text = "Today's Added"
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(5, 197)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(29, 31)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 66
+        Me.PictureBox3.TabStop = False
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -385,52 +383,40 @@ Partial Class MainForm
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1182, 667)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.todayAddedCount)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.activeLocationCount)
+        Me.Controls.Add(Me.registeredCount)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.casesCount)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.btnDashboard)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.btnAddRecord)
         Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.btnTrace)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnRecords)
-        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.currentD)
-        Me.Controls.Add(Me.btnEditInfo)
-        Me.Controls.Add(Me.btnEditGrades)
-        Me.Controls.Add(Me.btnShowUsersAccount)
-        Me.Controls.Add(Me.btnExit)
-        Me.Controls.Add(Me.btnDelete)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.btnAdd)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.DoubleBuffered = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "MainForm"
         Me.Text = "MainForm"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents btnAdd As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents btnDelete As Button
-    Friend WithEvents btnExit As Button
-    Friend WithEvents btnShowUsersAccount As Button
-    Friend WithEvents btnEditGrades As Button
-    Friend WithEvents btnEditInfo As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
@@ -439,18 +425,26 @@ Partial Class MainForm
     Friend WithEvents RefreshToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Timer1 As Timer
-    Friend WithEvents currentD As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents btnRecords As Button
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnTrace As Button
     Friend WithEvents btnLogout As Button
-    Friend WithEvents btnAddRecord As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label3 As Label
     Friend WithEvents btnDashboard As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents DirectoryEntry1 As DirectoryServices.DirectoryEntry
+    Friend WithEvents Label1 As Label
+    Friend WithEvents casesCount As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents registeredCount As Label
+    Friend WithEvents activeLocationCount As Label
+    Friend WithEvents todayAddedCount As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents PictureBox3 As PictureBox
 End Class

@@ -6,15 +6,18 @@ Public Class EditGrades
     Dim reader As MySqlDataReader
     Dim command As MySqlCommand
     Dim myset As DataSet
-    Dim id As Integer
+
     Private Sub EditGrades_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mycon.ConnectionString = "server=localhost; username=root; password=123qwe!@#QWE; database=login_db; port=3306; SslMode=None"
+        remarks.Format = DateTimePickerFormat.Custom
+        remarks.CustomFormat = "yyyy-MM-dd"
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+
+        RecordsForm.Show()
+        RecordsForm.loaddata()
         Me.Close()
-        MainForm.Show()
-        MainForm.loaddata()
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
@@ -22,7 +25,7 @@ Public Class EditGrades
             mycon.Open()
             Dim query, query2, query3 As String
 
-            query = "Select * from tblgrades where studnum ='" & studnum.Text & "'"
+            query = "Select * from profile where id ='" & id.Text & "'"
             command = New MySqlCommand(query, mycon)
             reader = command.ExecuteReader
 
@@ -34,13 +37,13 @@ Public Class EditGrades
             If count = 1 Then
                 mycon.Close()
                 mycon.Open()
-                query2 = "update tblgrades SET average='" & average.Text & "', remarks = '" & remarks.Text & "'" & "where studnum='" & studnum.Text & "'"
+                query2 = "update profile SET phone_number='" & average.Text & "', signed_date = '" & remarks.Text & "'" & "where id='" & id.Text & "'"
                 command = New MySqlCommand(query2, mycon)
                 reader = command.ExecuteReader
             Else
                 mycon.Close()
                 mycon.Open()
-                query3 = "insert into tblgrades SET studnum='" & studnum.Text & ", average ='" & average.Text & "', remarks='" & remarks.Text & "'"
+                query3 = "insert into profile SET studnum='" & id.Text & ", phone_number ='" & average.Text & "', signed_date='" & remarks.Text & "'"
                 command = New MySqlCommand(query3, mycon)
                 reader = command.ExecuteReader
             End If
@@ -52,11 +55,4 @@ Public Class EditGrades
         End Try
     End Sub
 
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles studnum.TextChanged
-
-    End Sub
 End Class

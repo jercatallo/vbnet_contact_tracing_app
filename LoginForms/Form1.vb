@@ -10,6 +10,9 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mycon.ConnectionString = "server=localhost; username=root; password=123qwe!@#QWE; database=login_db; port=3306; SslMode=None"
+
+        ' RecordsForm.Show()
+        ' Me.Close()
     End Sub
 
     Private Sub btnlogin_Click(sender As Object, e As EventArgs) Handles btnlogin.Click
@@ -18,7 +21,7 @@ Public Class Form1
             Dim query As String
             Dim myaccess As String
             Dim name As String
-            query = "Select * from tbllogin where uname='" & txtuname.Text & "' and pword='" & txtpword.Text & "'"
+            query = "Select * from user where uname='" & txtuname.Text & "' and pword='" & txtpword.Text & "'"
 
             command = New MySqlCommand(query, mycon)
             reader = Command.ExecuteReader
@@ -36,18 +39,10 @@ Public Class Form1
 
                 End With
                 If myaccess = "3" Then
-                    MainForm.btnDelete.Visible = False
-                    MainForm.btnEditInfo.Visible = False
-                    MainForm.btnShowUsersAccount.Visible = False
-                    MainForm.DeleteToolStripMenuItem.Enabled = False
-                    MainForm.EditToolStripMenuItem.Enabled = False
-                    MainForm.AddToolStripMenuItem.Enabled = False
+
 
                 ElseIf myaccess = "2" Then
-                    MainForm.btnDelete.Visible = False
-                    MainForm.btnShowUsersAccount.Visible = False
-                    MainForm.DeleteToolStripMenuItem.Enabled = False
-                    MainForm.AddToolStripMenuItem.Enabled = False
+
 
                 End If
                 MainForm.Show()
@@ -72,25 +67,5 @@ Public Class Form1
         Else
             txtpword.PasswordChar = "*"
         End If
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-    End Sub
-
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-
     End Sub
 End Class

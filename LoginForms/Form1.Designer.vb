@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Label1 = New System.Windows.Forms.Label()
@@ -52,7 +52,7 @@ Partial Class Form1
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.75!)
-        Me.Label1.Location = New System.Drawing.Point(811, 320)
+        Me.Label1.Location = New System.Drawing.Point(809, 300)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 21)
         Me.Label1.TabIndex = 0
@@ -63,7 +63,7 @@ Partial Class Form1
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.75!)
-        Me.Label2.Location = New System.Drawing.Point(810, 374)
+        Me.Label2.Location = New System.Drawing.Point(808, 354)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(64, 21)
         Me.Label2.TabIndex = 2
@@ -73,7 +73,7 @@ Partial Class Form1
         '
         Me.txtuname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtuname.Font = New System.Drawing.Font("Bahnschrift Condensed", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtuname.Location = New System.Drawing.Point(907, 308)
+        Me.txtuname.Location = New System.Drawing.Point(905, 288)
         Me.txtuname.Name = "txtuname"
         Me.txtuname.Size = New System.Drawing.Size(216, 40)
         Me.txtuname.TabIndex = 3
@@ -82,7 +82,7 @@ Partial Class Form1
         '
         Me.txtpword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtpword.Font = New System.Drawing.Font("Bahnschrift Condensed", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtpword.Location = New System.Drawing.Point(907, 366)
+        Me.txtpword.Location = New System.Drawing.Point(905, 346)
         Me.txtpword.Name = "txtpword"
         Me.txtpword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtpword.Size = New System.Drawing.Size(216, 40)
@@ -91,10 +91,11 @@ Partial Class Form1
         'btnclose
         '
         Me.btnclose.BackColor = System.Drawing.SystemColors.Control
+        Me.btnclose.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnclose.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnclose.Font = New System.Drawing.Font("Bahnschrift Condensed", 15.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnclose.Location = New System.Drawing.Point(852, 533)
+        Me.btnclose.Location = New System.Drawing.Point(850, 513)
         Me.btnclose.Name = "btnclose"
         Me.btnclose.Size = New System.Drawing.Size(297, 40)
         Me.btnclose.TabIndex = 7
@@ -104,13 +105,14 @@ Partial Class Form1
         'btnlogin
         '
         Me.btnlogin.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnlogin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnlogin.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight
         Me.btnlogin.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight
         Me.btnlogin.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight
         Me.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnlogin.Font = New System.Drawing.Font("Bahnschrift Condensed", 15.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnlogin.ForeColor = System.Drawing.SystemColors.InactiveBorder
-        Me.btnlogin.Location = New System.Drawing.Point(852, 485)
+        Me.btnlogin.Location = New System.Drawing.Point(850, 465)
         Me.btnlogin.Name = "btnlogin"
         Me.btnlogin.Size = New System.Drawing.Size(297, 42)
         Me.btnlogin.TabIndex = 9
@@ -121,8 +123,9 @@ Partial Class Form1
         '
         Me.chkpass.AutoSize = True
         Me.chkpass.BackColor = System.Drawing.Color.Transparent
+        Me.chkpass.Cursor = System.Windows.Forms.Cursors.Hand
         Me.chkpass.Font = New System.Drawing.Font("Bahnschrift Condensed", 10.75!)
-        Me.chkpass.Location = New System.Drawing.Point(1023, 429)
+        Me.chkpass.Location = New System.Drawing.Point(1021, 409)
         Me.chkpass.Name = "chkpass"
         Me.chkpass.Size = New System.Drawing.Size(106, 22)
         Me.chkpass.TabIndex = 10
@@ -137,20 +140,21 @@ Partial Class Form1
         Me.Label3.ForeColor = System.Drawing.SystemColors.Highlight
         Me.Label3.Location = New System.Drawing.Point(12, 115)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(457, 77)
+        Me.Label3.Size = New System.Drawing.Size(494, 77)
         Me.Label3.TabIndex = 11
-        Me.Label3.Text = "Contact Tracing App"
+        Me.Label3.Text = "CONTACT TRACING APP"
         '
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Bahnschrift Light", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Bahnschrift Light", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label4.Location = New System.Drawing.Point(21, 198)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(527, 348)
+        Me.Label4.Size = New System.Drawing.Size(469, 348)
         Me.Label4.TabIndex = 12
         Me.Label4.Text = resources.GetString("Label4.Text")
+        Me.Label4.UseMnemonic = False
         '
         'Label5
         '
@@ -158,7 +162,7 @@ Partial Class Form1
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Bahnschrift", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Label5.Location = New System.Drawing.Point(926, 270)
+        Me.Label5.Location = New System.Drawing.Point(924, 250)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(147, 19)
         Me.Label5.TabIndex = 13
@@ -170,7 +174,7 @@ Partial Class Form1
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Bahnschrift Condensed", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.SkyBlue
-        Me.Label6.Location = New System.Drawing.Point(807, 126)
+        Me.Label6.Location = New System.Drawing.Point(801, 115)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(351, 65)
         Me.Label6.TabIndex = 14
@@ -181,7 +185,7 @@ Partial Class Form1
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Bahnschrift Condensed", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(807, 74)
+        Me.Label7.Location = New System.Drawing.Point(801, 61)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(116, 65)
         Me.Label7.TabIndex = 15
@@ -224,7 +228,7 @@ Partial Class Form1
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(148, 356)
+        Me.PictureBox3.Location = New System.Drawing.Point(82, 390)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(264, 252)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -247,9 +251,9 @@ Partial Class Form1
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Bahnschrift SemiBold", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label10.Location = New System.Drawing.Point(815, 192)
+        Me.Label10.Location = New System.Drawing.Point(809, 191)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(527, 46)
+        Me.Label10.Size = New System.Drawing.Size(343, 29)
         Me.Label10.TabIndex = 21
         Me.Label10.Text = "JJG Contact Tracing App"
         '
@@ -259,7 +263,7 @@ Partial Class Form1
         Me.loginErrorMessage.BackColor = System.Drawing.Color.Transparent
         Me.loginErrorMessage.Font = New System.Drawing.Font("Bahnschrift", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.loginErrorMessage.ForeColor = System.Drawing.Color.Red
-        Me.loginErrorMessage.Location = New System.Drawing.Point(908, 410)
+        Me.loginErrorMessage.Location = New System.Drawing.Point(906, 390)
         Me.loginErrorMessage.Name = "loginErrorMessage"
         Me.loginErrorMessage.Size = New System.Drawing.Size(0, 14)
         Me.loginErrorMessage.TabIndex = 22

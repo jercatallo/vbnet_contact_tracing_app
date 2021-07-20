@@ -10,10 +10,11 @@ Public Class AddForm
     Dim reader As MySqlDataReader
     Dim command As MySqlCommand
     Dim myset As DataSet
+
     Private Sub AddForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mycon.ConnectionString = "server=localhost; username=root; password=123qwe!@#QWE; database=login_db; port=3306; SslMode=None"
-        dob.Format = DateTimePickerFormat.Custom
-        dob.CustomFormat = "yyyy-MM-dd"
+        signedDate.Format = DateTimePickerFormat.Custom
+        signedDate.CustomFormat = "yyyy-MM-dd"
     End Sub
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Try
@@ -21,37 +22,22 @@ Public Class AddForm
 
             Dim query, query2, query3 As String
 
-            query = "Select * from tblstudent where studnum ='" & stud_num.Text & "'"
-            command = New MySqlCommand(query, mycon)
-            reader = command.ExecuteReader
 
-            Dim count As Integer
-            count = 0
-            While reader.Read
-                count = count + 1
-            End While
-            If count = 1 Then
-                command.Dispose()
-                reader.Close()
-                MsgBox("Existing in the Database")
+            If signeeName.Text = "" Or status.Text = "" Or signedDate.Text = "" Or address.Text = "" Or phoneNumber.Text = "" Then
+                MsgBox("Fill-out all fields")
             Else
-                If stud_num.Text = "" Or stud_name.Text = "" Or stud_section.Text = "" Or dob.Text = "" Or stud_num.Text = "" Or studaverage.Text = "" Or studremarks.Text = "" Then
-                    MsgBox("Fill-out all fields")
-                Else
-                    mycon.Close()
-                    mycon.Open()
-                    query2 = "Insert Into tblstudent SET studnum='" & stud_num.Text & "', name = '" & stud_name.Text & "', section='" & stud_section.Text & "', dob='" & dob.Text & "'"
-                    command = New MySqlCommand(query2, mycon)
-                    reader = command.ExecuteReader
+                query2 = "Insert Into person SET name = '" & signeeName.Text & "', address='" & address.Text & "', status='" & status.Text & "'"
+                command = New MySqlCommand(query2, mycon)
+                reader = command.ExecuteReader
 
-                    mycon.Close()
-                    mycon.Open()
-                    query3 = "Insert into tblgrades SET studnum='" & stud_num.Text & "', average ='" & studaverage.Text & "', remarks='" & studremarks.Text & "'"
-                    command = New MySqlCommand(query3, mycon)
-                    reader = command.ExecuteReader
-                    MsgBox("Records Added")
-                End If
+                mycon.Close()
+                mycon.Open()
+                query3 = "Insert into profile SET phone_number ='" & phoneNumber.Text & "', signed_date='" & signedDate.Text & "'"
+                command = New MySqlCommand(query3, mycon)
+                reader = command.ExecuteReader
+                MsgBox("Records Added")
             End If
+
             mycon.Close()
         Catch ex As Exception
             mycon.Close()
@@ -60,12 +46,13 @@ Public Class AddForm
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        RecordsForm.Show()
+        RecordsForm.loaddata()
         Me.Close()
-        MainForm.Show()
-        MainForm.loaddata()
+
     End Sub
 
-    Private Sub dob_ValueChanged(sender As Object, e As EventArgs) Handles dob.ValueChanged
+    Private Sub dob_ValueChanged(sender As Object, e As EventArgs) Handles signedDate.ValueChanged
 
     End Sub
 End Class
