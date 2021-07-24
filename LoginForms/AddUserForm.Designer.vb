@@ -41,14 +41,14 @@ Partial Class AddUserForm
         '
         'lastname
         '
-        Me.lastname.Location = New System.Drawing.Point(115, 193)
+        Me.lastname.Location = New System.Drawing.Point(967, 464)
         Me.lastname.Name = "lastname"
         Me.lastname.Size = New System.Drawing.Size(155, 20)
         Me.lastname.TabIndex = 38
         '
         'firstname
         '
-        Me.firstname.Location = New System.Drawing.Point(115, 160)
+        Me.firstname.Location = New System.Drawing.Point(967, 431)
         Me.firstname.Name = "firstname"
         Me.firstname.Size = New System.Drawing.Size(155, 20)
         Me.firstname.TabIndex = 37
@@ -56,7 +56,7 @@ Partial Class AddUserForm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(25, 196)
+        Me.Label4.Location = New System.Drawing.Point(877, 467)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(58, 13)
         Me.Label4.TabIndex = 36
@@ -65,7 +65,7 @@ Partial Class AddUserForm
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(25, 160)
+        Me.Label6.Location = New System.Drawing.Point(877, 431)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(57, 13)
         Me.Label6.TabIndex = 35
@@ -75,7 +75,7 @@ Partial Class AddUserForm
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(24, 18)
+        Me.Label5.Location = New System.Drawing.Point(876, 289)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(97, 24)
         Me.Label5.TabIndex = 34
@@ -83,7 +83,7 @@ Partial Class AddUserForm
         '
         'btnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(196, 280)
+        Me.btnClose.Location = New System.Drawing.Point(1048, 551)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(75, 23)
         Me.btnClose.TabIndex = 33
@@ -92,7 +92,7 @@ Partial Class AddUserForm
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(115, 280)
+        Me.btnAdd.Location = New System.Drawing.Point(967, 551)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 23)
         Me.btnAdd.TabIndex = 32
@@ -101,21 +101,21 @@ Partial Class AddUserForm
         '
         'password
         '
-        Me.password.Location = New System.Drawing.Point(115, 125)
+        Me.password.Location = New System.Drawing.Point(967, 396)
         Me.password.Name = "password"
         Me.password.Size = New System.Drawing.Size(155, 20)
         Me.password.TabIndex = 31
         '
         'username
         '
-        Me.username.Location = New System.Drawing.Point(115, 92)
+        Me.username.Location = New System.Drawing.Point(967, 363)
         Me.username.Name = "username"
         Me.username.Size = New System.Drawing.Size(155, 20)
         Me.username.TabIndex = 30
         '
         'id
         '
-        Me.id.Location = New System.Drawing.Point(115, 59)
+        Me.id.Location = New System.Drawing.Point(967, 330)
         Me.id.Name = "id"
         Me.id.Size = New System.Drawing.Size(155, 20)
         Me.id.TabIndex = 29
@@ -123,7 +123,7 @@ Partial Class AddUserForm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(25, 128)
+        Me.Label3.Location = New System.Drawing.Point(877, 399)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(53, 13)
         Me.Label3.TabIndex = 28
@@ -132,7 +132,7 @@ Partial Class AddUserForm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(25, 92)
+        Me.Label2.Location = New System.Drawing.Point(877, 363)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(55, 13)
         Me.Label2.TabIndex = 27
@@ -141,7 +141,7 @@ Partial Class AddUserForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(25, 62)
+        Me.Label1.Location = New System.Drawing.Point(877, 333)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(48, 13)
         Me.Label1.TabIndex = 26
@@ -149,7 +149,7 @@ Partial Class AddUserForm
         '
         'level
         '
-        Me.level.Location = New System.Drawing.Point(114, 223)
+        Me.level.Location = New System.Drawing.Point(966, 494)
         Me.level.Name = "level"
         Me.level.Size = New System.Drawing.Size(155, 20)
         Me.level.TabIndex = 40
@@ -157,7 +157,7 @@ Partial Class AddUserForm
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(24, 226)
+        Me.Label7.Location = New System.Drawing.Point(876, 497)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(71, 13)
         Me.Label7.TabIndex = 39
@@ -167,7 +167,7 @@ Partial Class AddUserForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(303, 331)
+        Me.ClientSize = New System.Drawing.Size(1182, 667)
         Me.Controls.Add(Me.level)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.lastname)

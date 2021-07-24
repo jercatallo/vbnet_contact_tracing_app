@@ -53,11 +53,9 @@ Partial Class MainForm
         Me.activeLocationCount = New System.Windows.Forms.Label()
         Me.todayAddedCount = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -81,7 +79,7 @@ Partial Class MainForm
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'RecordsToolStripMenuItem
@@ -144,7 +142,7 @@ Partial Class MainForm
         Me.btnRecords.Name = "btnRecords"
         Me.btnRecords.Size = New System.Drawing.Size(260, 42)
         Me.btnRecords.TabIndex = 19
-        Me.btnRecords.Text = "          Records"
+        Me.btnRecords.Text = "Records"
         Me.btnRecords.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnRecords.UseVisualStyleBackColor = False
         '
@@ -365,17 +363,6 @@ Partial Class MainForm
         Me.Label9.TabIndex = 64
         Me.Label9.Text = "Today's Added"
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(5, 197)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(29, 31)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 66
-        Me.PictureBox3.TabStop = False
-        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -383,7 +370,6 @@ Partial Class MainForm
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1182, 667)
-        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.todayAddedCount)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.activeLocationCount)
@@ -412,7 +398,6 @@ Partial Class MainForm
         Me.MenuStrip1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -446,5 +431,4 @@ Partial Class MainForm
     Friend WithEvents activeLocationCount As Label
     Friend WithEvents todayAddedCount As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents PictureBox3 As PictureBox
 End Class

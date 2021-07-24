@@ -52,7 +52,22 @@ Public Class AddForm
 
     End Sub
 
-    Private Sub dob_ValueChanged(sender As Object, e As EventArgs) Handles signedDate.ValueChanged
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        Form1.Show()
+        Me.Close()
+    End Sub
 
+    Private Sub btnAddRecord_Click(sender As Object, e As EventArgs)
+        Me.Show()
+    End Sub
+
+    Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
+        MainForm.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub btnRecords_Click(sender As Object, e As EventArgs) Handles btnRecords.Click
+        RecordsForm.Show()
+        Me.Close()
     End Sub
 End Class

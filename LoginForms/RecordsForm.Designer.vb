@@ -35,7 +35,6 @@ Partial Class RecordsForm
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btnEditInfo = New System.Windows.Forms.Button()
-        Me.btnEditGrades = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -145,26 +144,12 @@ Partial Class RecordsForm
         Me.btnEditInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEditInfo.Font = New System.Drawing.Font("Bahnschrift SemiBold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.btnEditInfo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnEditInfo.Location = New System.Drawing.Point(790, 97)
+        Me.btnEditInfo.Location = New System.Drawing.Point(886, 97)
         Me.btnEditInfo.Name = "btnEditInfo"
         Me.btnEditInfo.Size = New System.Drawing.Size(123, 37)
         Me.btnEditInfo.TabIndex = 41
         Me.btnEditInfo.Text = "Edit Info"
         Me.btnEditInfo.UseVisualStyleBackColor = False
-        '
-        'btnEditGrades
-        '
-        Me.btnEditGrades.BackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.btnEditGrades.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnEditGrades.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEditGrades.Font = New System.Drawing.Font("Bahnschrift SemiBold", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.btnEditGrades.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnEditGrades.Location = New System.Drawing.Point(919, 97)
-        Me.btnEditGrades.Name = "btnEditGrades"
-        Me.btnEditGrades.Size = New System.Drawing.Size(123, 37)
-        Me.btnEditGrades.TabIndex = 40
-        Me.btnEditGrades.Text = "Edit Grades"
-        Me.btnEditGrades.UseVisualStyleBackColor = False
         '
         'btnDelete
         '
@@ -173,7 +158,7 @@ Partial Class RecordsForm
         Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDelete.Font = New System.Drawing.Font("Bahnschrift SemiBold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnDelete.Location = New System.Drawing.Point(1048, 97)
+        Me.btnDelete.Location = New System.Drawing.Point(1015, 97)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(123, 37)
         Me.btnDelete.TabIndex = 37
@@ -187,7 +172,7 @@ Partial Class RecordsForm
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdd.Font = New System.Drawing.Font("Bahnschrift SemiBold", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnAdd.Location = New System.Drawing.Point(661, 97)
+        Me.btnAdd.Location = New System.Drawing.Point(757, 97)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(123, 37)
         Me.btnAdd.TabIndex = 33
@@ -216,7 +201,7 @@ Partial Class RecordsForm
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption
-        Me.DataGridView1.Location = New System.Drawing.Point(269, 144)
+        Me.DataGridView1.Location = New System.Drawing.Point(398, 140)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -231,7 +216,7 @@ Partial Class RecordsForm
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridView1.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Bahnschrift Light Condensed", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.Size = New System.Drawing.Size(901, 390)
+        Me.DataGridView1.Size = New System.Drawing.Size(740, 390)
         Me.DataGridView1.TabIndex = 32
         '
         'MenuStrip1
@@ -384,7 +369,6 @@ Partial Class RecordsForm
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.btnEditInfo)
-        Me.Controls.Add(Me.btnEditGrades)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.DataGridView1)
@@ -410,7 +394,6 @@ Partial Class RecordsForm
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents btnEditInfo As Button
-    Friend WithEvents btnEditGrades As Button
     Friend WithEvents btnDelete As Button
     Friend WithEvents btnAdd As Button
     Friend WithEvents DataGridView1 As DataGridView

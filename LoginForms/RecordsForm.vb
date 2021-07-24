@@ -102,20 +102,13 @@ Public Class RecordsForm
 
     End Sub
 
-    Private Sub btnEditGrades_Click(sender As Object, e As EventArgs) Handles btnEditGrades.Click
-
-        EditGrades.id.Text = DataGridView1.CurrentRow.Cells(0).Value
-        EditGrades.average.Text = DataGridView1.CurrentRow.Cells(4).Value
-        EditGrades.remarks.Text = DataGridView1.CurrentRow.Cells(5).Value
-        EditGrades.Show()
-        Me.Close()
-    End Sub
-
     Private Sub btnEditInfo_Click(sender As Object, e As EventArgs) Handles btnEditInfo.Click
         EditForm.id.Text = DataGridView1.CurrentRow.Cells(0).Value
         EditForm.studname.Text = DataGridView1.CurrentRow.Cells(1).Value
         EditForm.studaddress.Text = DataGridView1.CurrentRow.Cells(2).Value
         EditForm.status.Text = DataGridView1.CurrentRow.Cells(3).Value
+        EditForm.average.Text = DataGridView1.CurrentRow.Cells(4).Value
+        EditForm.remarks.Text = DataGridView1.CurrentRow.Cells(5).Value
         EditForm.Show()
     End Sub
 

@@ -13,6 +13,8 @@ Public Class EditForm
 
     Private Sub EditForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mycon.ConnectionString = "server=localhost; username=root; password=123qwe!@#QWE; database=login_db; port=3306; SslMode=None"
+        remarks.Format = DateTimePickerFormat.Custom
+        remarks.CustomFormat = "yyyy-MM-dd"
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
@@ -33,6 +35,13 @@ Public Class EditForm
                     myadap.SelectCommand.CommandText = "UPDATE person SET name='" & studname.Text & "', address='" & studaddress.Text & "'" & ", status='" & status.Text & "'" & " where id='" & id.Text & "'"
                     myadap.SelectCommand.ExecuteReader()
                     mycon.Close()
+
+                    mycon.Open()
+                    myadap.SelectCommand = mycon.CreateCommand
+                    myadap.SelectCommand.CommandText = "update profile SET phone_number='" & average.Text & "', signed_date = '" & remarks.Text & "'" & "where id='" & id.Text & "'"
+                    myadap.SelectCommand.ExecuteReader()
+                    mycon.Close()
+
                     MsgBox("Updated Successfully")
                 End If
             End If

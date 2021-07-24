@@ -70,7 +70,7 @@ Public Class MainForm
                 activeLocationCount.Text = .Item("address")
             End With
 
-
+            mycon.Close()
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
@@ -110,7 +110,7 @@ Public Class MainForm
         Me.Close()
     End Sub
 
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class
