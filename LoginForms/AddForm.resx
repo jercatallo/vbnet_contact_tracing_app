@@ -3648,9 +3648,6 @@
   <data name="Label5.Text" xml:space="preserve">
     <value>Contact tracing is the process of identifying people who may have come into contact with someone who has been infected with the Corona Virus Disease(CoViD). Nowadays, contact tracing is very important  especially this pandemic. This application helps us to identify who are the people at risk.</value>
   </data>
-  <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>

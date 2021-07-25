@@ -110,51 +110,13 @@ Public Class RecordsForm
         EditForm.average.Text = DataGridView1.CurrentRow.Cells(4).Value
         EditForm.remarks.Text = DataGridView1.CurrentRow.Cells(5).Value
         EditForm.Show()
+        Me.Close()
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs)
         End
     End Sub
 
-    Private Sub btnShowUsersAccount_Click(sender As Object, e As EventArgs)
-        UsersForm.Show()
-        Me.Close()
-    End Sub
-    Private Sub RefreshToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RefreshToolStripMenuItem.Click
-        loaddata()
-
-    End Sub
-
-    Private Sub AddToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddToolStripMenuItem.Click
-        AddForm.Show()
-    End Sub
-
-    Private Sub DeleteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem.Click
-        Dim ans = MsgBox("Delete this record?", vbOKCancel + vbQuestion, "Deleting")
-        If ans = vbOK Then
-            Try
-                mycon.Open()
-                Dim query2, query3 As String
-
-
-                query2 = "Delete from profile where id=" & DataGridView1.CurrentRow.Cells(0).Value & ""
-                command = New MySqlCommand(query2, mycon)
-                reader = command.ExecuteReader
-
-                mycon.Close()
-
-                mycon.Open()
-                query3 = "Delete from person where id=" & DataGridView1.CurrentRow.Cells(0).Value & ""
-                command = New MySqlCommand(query3, mycon)
-                reader = command.ExecuteReader
-                mycon.Close()
-                MsgBox("Records Deleted")
-                loaddata()
-            Catch ex As Exception
-                MsgBox(ex.ToString)
-            End Try
-        End If
-    End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         End
@@ -172,17 +134,26 @@ Public Class RecordsForm
         Me.Show()
     End Sub
 
-
-    Private Sub btnAddRecord_Click(sender As Object, e As EventArgs)
-        AddForm.Show()
-        Me.Close()
-    End Sub
-    Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
-        MainForm.Show()
-        Me.Close()
-    End Sub
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         Form1.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub btnTraceContact_Click(sender As Object, e As EventArgs) Handles btnTraceContact.Click
+        TraceForm.traceId.Text = DataGridView1.CurrentRow.Cells(0).Value
+        TraceForm.traceName.Text = DataGridView1.CurrentRow.Cells(1).Value
+        TraceForm.traceDate.Text = DataGridView1.CurrentRow.Cells(5).Value
+        TraceForm.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub btnAbout_Click(sender As Object, e As EventArgs) Handles btnAbout.Click
+        AboutForm.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
+        MainForm.Show()
         Me.Close()
     End Sub
 End Class

@@ -78,6 +78,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutForm.Designer.vb">
+      <DependentUpon>AboutForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AddForm.Designer.vb">
       <DependentUpon>AddForm.vb</DependentUpon>
     </Compile>
@@ -137,6 +143,12 @@
     <Compile Include="RecordsForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TraceForm.Designer.vb">
+      <DependentUpon>TraceForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TraceForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UsersForm.Designer.vb">
       <DependentUpon>UsersForm.vb</DependentUpon>
     </Compile>
@@ -145,6 +157,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddForm.resx">
       <DependentUpon>AddForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RecordsForm.resx">
       <DependentUpon>RecordsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraceForm.resx">
+      <DependentUpon>TraceForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsersForm.resx">
       <DependentUpon>UsersForm.vb</DependentUpon>

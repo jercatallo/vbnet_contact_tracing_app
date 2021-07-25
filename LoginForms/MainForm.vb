@@ -16,8 +16,7 @@ Public Class MainForm
         Try
             mycon.Open()
             Dim getPersonsQuery, getCasesQuery, getTodayAddedQuery, getMostActiveLocationQuery As String
-            Dim personsCount, casesCountInt, todayAddedCountInt, activeLocationCountInt As Integer
-            Dim activeLocationCountString As String
+            Dim personsCount, casesCountInt, todayAddedCountInt As Integer
             getPersonsQuery = "Select * from person"
             command = New MySqlCommand(getPersonsQuery, mycon)
             reader = command.ExecuteReader
@@ -77,16 +76,6 @@ Public Class MainForm
 
     End Sub
 
-    Private Sub btnShowUsersAccount_Click(sender As Object, e As EventArgs)
-        UsersForm.Show()
-        Me.Close()
-    End Sub
-
-    Private Sub RefreshToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RefreshToolStripMenuItem.Click
-        loaddata()
-
-    End Sub
-
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         End
     End Sub
@@ -96,21 +85,18 @@ Public Class MainForm
         Me.Close()
     End Sub
 
-    Private Sub btnAddRecord_Click(sender As Object, e As EventArgs)
-        AddForm.Show()
-        Me.Close()
-    End Sub
-
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
         Me.Show()
+    End Sub
+
+
+    Private Sub btnAbout_Click(sender As Object, e As EventArgs) Handles btnAbout.Click
+        AboutForm.Show()
+        Me.Close()
     End Sub
 
     Private Sub btnRecords_Click(sender As Object, e As EventArgs) Handles btnRecords.Click
         RecordsForm.Show()
         Me.Close()
-    End Sub
-
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs)
-
     End Sub
 End Class

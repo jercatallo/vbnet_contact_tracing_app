@@ -63,3 +63,5 @@ C:\Users\JC\Desktop\LoginForms\LoginForms\obj\Debug\LoginForms.exe
 C:\Users\JC\Desktop\LoginForms\LoginForms\obj\Debug\LoginForms.xml
 C:\Users\JC\Desktop\LoginForms\LoginForms\obj\Debug\LoginForms.pdb
 C:\Users\JC\Desktop\LoginForms\LoginForms\obj\Debug\LoginForms.RecordsForm.resources
+C:\Users\JC\Desktop\LoginForms\LoginForms\obj\Debug\LoginForms.TraceForm.resources
+C:\Users\JC\Desktop\LoginForms\LoginForms\obj\Debug\LoginForms.AboutForm.resources

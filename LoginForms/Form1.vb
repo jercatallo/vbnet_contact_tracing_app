@@ -10,9 +10,6 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mycon.ConnectionString = "server=localhost; username=root; password=123qwe!@#QWE; database=login_db; port=3306; SslMode=None"
-
-        ' RecordsForm.Show()
-        ' Me.Close()
     End Sub
 
     Private Sub btnlogin_Click(sender As Object, e As EventArgs) Handles btnlogin.Click
@@ -39,10 +36,11 @@ Public Class Form1
 
                 End With
                 If myaccess = "3" Then
-
+                    RecordsForm.btnDelete.Visible = False
+                    RecordsForm.btnEditInfo.Visible = False
 
                 ElseIf myaccess = "2" Then
-
+                    RecordsForm.btnDelete.Visible = False
 
                 End If
                 MainForm.Show()

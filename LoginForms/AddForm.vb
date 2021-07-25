@@ -24,7 +24,8 @@ Public Class AddForm
 
 
             If signeeName.Text = "" Or status.Text = "" Or signedDate.Text = "" Or address.Text = "" Or phoneNumber.Text = "" Then
-                MsgBox("Fill-out all fields")
+                addMsg.Text = "Fill-out all fields"
+                addMsg.ForeColor = ColorTranslator.FromHtml("Red")
             Else
                 query2 = "Insert Into person SET name = '" & signeeName.Text & "', address='" & address.Text & "', status='" & status.Text & "'"
                 command = New MySqlCommand(query2, mycon)
@@ -35,7 +36,14 @@ Public Class AddForm
                 query3 = "Insert into profile SET phone_number ='" & phoneNumber.Text & "', signed_date='" & signedDate.Text & "'"
                 command = New MySqlCommand(query3, mycon)
                 reader = command.ExecuteReader
-                MsgBox("Records Added")
+
+                signeeName.Text = ""
+                status.Text = ""
+                signedDate.Text = ""
+                address.Text = ""
+                phoneNumber.Text = ""
+                addMsg.Text = "Records Added"
+                addMsg.ForeColor = ColorTranslator.FromHtml("SpringGreen")
             End If
 
             mycon.Close()
@@ -57,10 +65,6 @@ Public Class AddForm
         Me.Close()
     End Sub
 
-    Private Sub btnAddRecord_Click(sender As Object, e As EventArgs)
-        Me.Show()
-    End Sub
-
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
         MainForm.Show()
         Me.Close()
@@ -70,4 +74,11 @@ Public Class AddForm
         RecordsForm.Show()
         Me.Close()
     End Sub
+
+    Private Sub btnAbout_Click(sender As Object, e As EventArgs) Handles btnAbout.Click
+        AboutForm.Show()
+        Me.Close()
+    End Sub
+
+
 End Class
